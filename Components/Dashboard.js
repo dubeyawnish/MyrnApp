@@ -15,7 +15,7 @@ const Dashboard = ({ route, navigation }) => {
 
 
             <Text>Dashboard</Text>
-            {/* {<Text>{name} - {deptId}</Text>} */}
+            {/* <Text>{name} - {deptId}</Text> */}
             <Button title='Home' onPress={gotoHome} />
             <Button title='Go Back' onPress={gotoHome} />
         </View>

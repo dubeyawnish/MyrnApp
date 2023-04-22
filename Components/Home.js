@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 
 const Home = (props) => {
     const [name, setName] = useState('');
-    const [deptId, setDeptId] = useState();
+    const [deptId, setDeptId] = useState('');
     const gotoDashboard = () => {
         props.navigation.navigate('Dashboard', {
             name: name,
             deptId: deptId,
         });
+        //console.log(name);
 
     }
     const onChangeDeptid = (deptidInput) => {
@@ -31,6 +32,7 @@ const Home = (props) => {
                 placeholder='Enter Deptid'
             />
             <Button title='Dashboard' onPress={gotoDashboard} />
+            <Button title='Movie' onPress={()=>props.navigation.navigate('Movie')} />
         </View>
     )
 }
